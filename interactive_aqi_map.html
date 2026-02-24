@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Interactive AQI Map - India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { margin:0; font-family: Arial, sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .legend { background: white; padding: 12px 16px; border-radius: 8px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.3); line-height: 1.8; font-size: 13px; }
+        .legend-dot { display:inline-block; width:14px; height:14px;
+                       border-radius:50%; margin-right:6px; vertical-align:middle; }
+        .title-box { background:white; padding:10px 16px; border-radius:8px;
+                      box-shadow:0 2px 8px rgba(0,0,0,0.3); font-size:15px; font-weight:bold; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    var map = L.map('map').setView([22.5, 82.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    
+    L.circleMarker([23.0225, 72.5714], {
+        radius: 30,
+        fillColor: '#8b0000',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Ahmedabad</b><br>
+            <span style="color:#8b0000;font-size:13px;font-weight:bold">AQI: 452.1</span><br>
+            <span style="color:#555">Severe/Hazardous</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([28.6139, 77.209], {
+        radius: 17.3,
+        fillColor: '#ff7e00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Delhi</b><br>
+            <span style="color:#ff7e00;font-size:13px;font-weight:bold">AQI: 259.5</span><br>
+            <span style="color:#555">Poor</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([25.5941, 85.1376], {
+        radius: 16.053333333333335,
+        fillColor: '#ff7e00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Patna</b><br>
+            <span style="color:#ff7e00;font-size:13px;font-weight:bold">AQI: 240.8</span><br>
+            <span style="color:#555">Poor</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([28.4595, 77.0266], {
+        radius: 15.006666666666666,
+        fillColor: '#ff7e00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Gurugram</b><br>
+            <span style="color:#ff7e00;font-size:13px;font-weight:bold">AQI: 225.1</span><br>
+            <span style="color:#555">Poor</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([26.8467, 80.9462], {
+        radius: 14.533333333333333,
+        fillColor: '#ff7e00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Lucknow</b><br>
+            <span style="color:#ff7e00;font-size:13px;font-weight:bold">AQI: 218.0</span><br>
+            <span style="color:#555">Poor</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([20.95, 85.2333], {
+        radius: 11.526666666666667,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Talcher</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 172.9</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([23.68, 86.42], {
+        radius: 10.620000000000001,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Jorapokhar</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 159.3</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([21.82, 83.92], {
+        radius: 10.020000000000001,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Brajrajnagar</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 150.3</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([22.5726, 88.3639], {
+        radius: 9.373333333333333,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Kolkata</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 140.6</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([26.1445, 91.7362], {
+        radius: 9.34,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Guwahati</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 140.1</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([26.9124, 75.7873], {
+        radius: 8.913333333333332,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Jaipur</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 133.7</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([23.2599, 77.4126], {
+        radius: 8.853333333333333,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Bhopal</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 132.8</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([31.634, 74.8723], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Amritsar</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 119.9</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([17.6868, 83.2185], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Visakhapatnam</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 117.3</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([13.0827, 80.2707], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Chennai</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 114.5</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([17.385, 78.4867], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Hyderabad</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 109.2</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([19.076, 72.8777], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Mumbai</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 105.4</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([9.9312, 76.2673], {
+        radius: 8,
+        fillColor: '#ffff00',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Kochi</b><br>
+            <span style="color:#ffff00;font-size:13px;font-weight:bold">AQI: 104.3</span><br>
+            <span style="color:#555">Moderate</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([30.7333, 76.7794], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Chandigarh</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 96.5</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([20.9374, 77.7796], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Amaravati</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 95.3</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([12.9716, 77.5946], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Bengaluru</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 94.3</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([9.9816, 76.2999], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Ernakulam</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 92.4</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([8.5241, 76.9366], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Thiruvananthapuram</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 75.9</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([11.0168, 76.9558], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Coimbatore</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 73.0</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([25.5788, 91.8933], {
+        radius: 8,
+        fillColor: '#92d14f',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Shillong</b><br>
+            <span style="color:#92d14f;font-size:13px;font-weight:bold">AQI: 53.8</span><br>
+            <span style="color:#555">Satisfactory</span>
+        </div>
+    `).addTo(map);
+
+    L.circleMarker([23.7271, 92.7176], {
+        radius: 8,
+        fillColor: '#00e400',
+        color: '#333',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).bindPopup(`
+        <div style="font-family:Arial;min-width:160px">
+            <b style="font-size:15px">Aizawl</b><br>
+            <span style="color:#00e400;font-size:13px;font-weight:bold">AQI: 34.8</span><br>
+            <span style="color:#555">Good</span>
+        </div>
+    `).addTo(map);
+
+
+    // Legend
+    var legend = L.control({position: 'bottomright'});
+    legend.onAdd = function() {
+        var div = L.DomUtil.create('div', 'legend');
+        div.innerHTML = `
+            <b>AQI Categories</b><br>
+            <span class="legend-dot" style="background:#00e400"></span> Good (0–50)<br>
+            <span class="legend-dot" style="background:#92d14f"></span> Satisfactory (51–100)<br>
+            <span class="legend-dot" style="background:#ffff00"></span> Moderate (101–200)<br>
+            <span class="legend-dot" style="background:#ff7e00"></span> Poor (201–300)<br>
+            <span class="legend-dot" style="background:#ff0000"></span> Very Poor (301–400)<br>
+            <span class="legend-dot" style="background:#8b0000"></span> Severe (400+)<br>
+            <br><small>Circle size = relative AQI level</small>
+        `;
+        return div;
+    };
+    legend.addTo(map);
+
+    // Title
+    var title = L.control({position: 'topleft'});
+    title.onAdd = function() {
+        var div = L.DomUtil.create('div', 'title-box');
+        div.innerHTML = 'India AQI Map (2015–2020 Avg) &nbsp;|&nbsp; Click a city for details';
+        return div;
+    };
+    title.addTo(map);
+</script>
+</body>
+</html>

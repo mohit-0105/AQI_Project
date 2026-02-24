@@ -1,0 +1,23 @@
+=== AQI PROJECT - FULL OUTPUT ===
+
+Dataset Shape: (24850, 16)
+Missing values after cleaning: 0
+
+=== MODEL RESULTS ===
+Linear Regression         | MAE: 31.20 | RMSE: 59.11 | R2: 0.8092
+Random Forest             | MAE: 20.60 | RMSE: 40.49 | R2: 0.9105
+Gradient Boosting         | MAE: 23.71 | RMSE: 43.80 | R2: 0.8952
+
+=== FEATURE IMPORTANCE (Random Forest) ===
+PM2.5       : 0.491
+CO          : 0.368
+NO          : 0.037
+PM10        : 0.037
+O3          : 0.015
+NOx         : 0.012
+SO2         : 0.010
+NO2         : 0.008
+Toluene     : 0.007
+Xylene      : 0.006
+Benzene     : 0.005
+NH3         : 0.003
