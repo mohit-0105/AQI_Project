@@ -3,6 +3,13 @@
 
 ---
 
+## Contributors
+Jaivesh Chopra
+Dinas Pratap Singh
+Mohit Srivastav
+Shreyas Tiwari
+Rehmatjot Singh Grewal
+
 ## Table of Contents
 
 1. [What Is This Project About?](#1-what-is-this-project-about)
