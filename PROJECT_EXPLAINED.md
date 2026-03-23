@@ -4,10 +4,10 @@
 ---
 
 ## Contributors
-Jaivesh Chopra
-Dinas Pratap Singh
-Mohit Srivastav
-Shreyas Tiwari
+Jaivesh Chopra,
+Dinas Pratap Singh,
+Mohit Srivastav,
+Shreyas Tiwari,
 Rehmatjot Singh Grewal
 
 ## Table of Contents
