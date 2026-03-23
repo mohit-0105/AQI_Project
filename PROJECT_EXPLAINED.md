@@ -2,6 +2,13 @@
 ### Everything Explained From Scratch — What It Is, How It Works, and Why
 
 ---
+## Contributors
+Jaivesh Chopra,
+Dinas Pratap Singh,
+Mohit Srivastav,
+Shreyas Tiwari,
+Rehmatjot Singh Grewal
+
 
 ## Table of Contents
 
